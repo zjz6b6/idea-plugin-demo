@@ -14,4 +14,5 @@ class MyProjectService(project: Project) {
     }
 
     fun getRandomNumber() = (1..100).random()
+
 }

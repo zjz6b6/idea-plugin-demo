@@ -23,3 +23,11 @@
   - UI 线程：调用ReadAction.nonBlocking()返回NonBlockingReadAction(NBRA)，如果调用了上述方法未生效，比如虽取消了线程但窗口依然未关闭，此时可再调用expireWith() or expireWhen()来修复；
   - 如果是后台线程：循环调用ProgressManager.getInstance().runInReadActionWithWriteActionPriority()，直到所有任务都取消。
   - 基于文件索引：调用ReadAction.nonBlocking(...).inSmartMode()
+
+
+
+### UI Swing
+
+<img src="./assets/b864dfbc3c734bd9bf8c9b0a0b797b8a.png" alt="img" style="zoom:50%;" />
+
+<img src="./assets/Swing-Java.png" alt="img"  />
