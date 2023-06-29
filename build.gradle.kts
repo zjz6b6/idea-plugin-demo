@@ -18,6 +18,8 @@ version = properties("pluginVersion").get()
 
 // Configure project's dependencies
 repositories {
+    mavenLocal()
+    maven("https://maven.aliyun.com/nexus/content/repositories/central/")
     mavenCentral()
 }
 
@@ -124,4 +126,11 @@ tasks {
         // https://plugins.jetbrains.com/docs/intellij/deployment.html#specifying-a-release-channel
         channels = properties("pluginVersion").map { listOf(it.split('-').getOrElse(1) { "default" }.split('.').first()) }
     }
+
+    // 将依赖打进jar包中
+    jar.configure {
+        duplicatesStrategy = org.gradle.api.file.DuplicatesStrategy.INCLUDE
+        from(configurations.runtimeClasspath.get().filter { it.name.endsWith("jar")}.map { zipTree(it) })
+    }
+
 }

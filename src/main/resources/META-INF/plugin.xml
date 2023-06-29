@@ -1,18 +1,47 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.zjz6b6.ideaplugindemo</id>
-    <name>idea-plugin-demo Template</name>
-    <vendor>zjz6b6</vendor>
 
+    <!-- 插件的唯一标识符，不设置即name（不推荐），必填在plugin.xml或build.gradle文件的patchPluginXml中设置 -->
+    <id>com.github.zjz6b6.ideaplugindemo</id>
+
+    <!-- 插件名 ，必填-->
+    <name>idea-plugin-demo</name>
+
+    <!-- 作者相关信息 ，必填-->
+    <vendor email="zhengjinzhou6b6@gmail.com" url="https://easyyapi.com/">zjz6b6</vendor>
+
+    <!-- 插件描述，使用<![CDATA[  ]]> 来支持HTML格式，必填在plugin.xml或build.gradle文件的patchPluginXml中设置-->
+    <!--    <description>Integrates Volume Snapshot Service W10</description>-->
+
+    <!-- 插件更新记录，使用<![CDATA[  ]]> 来支持HTML格式，非必填在plugin.xml或build.gradle文件的patchPluginXml中设置-->
+    <!--    <change-notes>Initial release of the plugin.</change-notes>-->
+
+    <!-- 插件版本，格式：BRANCH.BUILD.FIX (MAJOR.MINOR.FIX) ，必填在plugin.xml或build.gradle文件的patchPluginXml中设置-->
+    <!--    <version>1.1.1</version>-->
+
+    <!-- 插件依赖，可以依赖模块或插件 -->
     <depends>com.intellij.modules.platform</depends>
 
+    <!-- 资源包，kv，方便管理文本以及i18n，下边代码会加载messages/Bundle.properties包的内容-->
     <resource-bundle>messages.MyBundle</resource-bundle>
 
+    <!-- 行为 https://plugins.jetbrains.com/docs/intellij/plugin-actions.html-->
+    <actions>
+    </actions>
+
+    <!-- 声明该插件对IDEA core或其他插件的扩展，Ns是NameSpace的缩写 -->
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.zjz6b6.ideaplugindemo.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
 
+    <!-- 插件定义的扩展点，以供其他插件扩展该插件，类似Java的抽象类的功能
+    如何在https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html -->
+    <extensionPoints>
+    </extensionPoints>
+
+    <!-- 监听器 https://plugins.jetbrains.com/docs/intellij/plugin-listeners.html -->
     <applicationListeners>
-        <listener class="com.github.zjz6b6.ideaplugindemo.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+        <listener class="com.github.zjz6b6.ideaplugindemo.listeners.MyApplicationActivationListener"
+                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
 </idea-plugin>
