@@ -32,6 +32,7 @@
     <!-- 声明该插件对IDEA core或其他插件的扩展，Ns是NameSpace的缩写 -->
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.zjz6b6.ideaplugindemo.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <errorHandler implementation="com.zd.errreport.SentryErrorReporter"/>
     </extensions>
 
     <!-- 插件定义的扩展点，以供其他插件扩展该插件，类似Java的抽象类的功能
