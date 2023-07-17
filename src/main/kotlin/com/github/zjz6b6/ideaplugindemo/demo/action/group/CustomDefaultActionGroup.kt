@@ -16,6 +16,7 @@ class CustomDefaultActionGroup : DefaultActionGroup() {
         e.presentation.isEnabled = (editor != null)
 //        e.presentation.icon = SdkIcons.Sdk_default_icon
         e.presentation.icon = SdkIcons.My_icon
+//        e.presentation.icon = IconHelpr.MY_ICON
     }
 
 }

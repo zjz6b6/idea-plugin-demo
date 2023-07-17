@@ -13,14 +13,20 @@
   - Template：https://github.com/JetBrains/intellij-platform-plugin-template#getting-started
   - 开发平台（IntelliJ Platform）：https://github.com/JetBrains/intellij-community
 
+- Icon：
+
+  - https://bjansen.github.io/intellij-icon-generator/
+
+  - https://jetbrains.design/intellij/resources/icons_list/
 
 
-扩展：JCEF：https://bitbucket.org/chromiumembedded/java-cef/src/master/
 
-Icon：
 
-- https://bjansen.github.io/intellij-icon-generator/
-- https://jetbrains.design/intellij/resources/icons_list/
+扩展：
+
+- JCEF：https://bitbucket.org/chromiumembedded/java-cef/src/master/
+
+- Mix Java And Kotlin：https://kotlinlang.org/docs/mixing-java-kotlin-intellij.html
 
 
 

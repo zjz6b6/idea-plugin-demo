@@ -52,7 +52,9 @@
                popup="true" >
             <add-to-group group-id="EditorPopupMenu" anchor="first" />
             <action id="org.intellij.sdk.action.CustomGroupedAction"
-                    class="com.github.zjz6b6.ideaplugindemo.demo.action.PopupDialogAction" icon="com.github.zjz6b6.ideaplugindemo.demo.SdkIcons.My_icon"/>
+                    class="com.github.zjz6b6.ideaplugindemo.demo.action.PopupDialogAction"
+                    icon="com.github.zjz6b6.ideaplugindemo.demo.SdkIcons.My_icon"
+            />
         </group>
     </actions>
 
