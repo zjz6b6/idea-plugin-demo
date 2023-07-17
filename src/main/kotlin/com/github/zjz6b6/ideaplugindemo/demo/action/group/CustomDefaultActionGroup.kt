@@ -15,7 +15,6 @@ class CustomDefaultActionGroup : DefaultActionGroup() {
         var editor = e.getData(CommonDataKeys.EDITOR)
         e.presentation.isEnabled = (editor != null)
         e.presentation.icon = MyTools.SdkIcons.Sdk_default_icon
-
     }
 
 }

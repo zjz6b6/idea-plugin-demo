@@ -8,6 +8,7 @@
 - 官方：
   - DOC：https://plugins.jetbrains.com/docs/intellij/plugins-quick-start.html
   - UI： https://jetbrains.design/intellij/
+  - **官方Demo**：https://github.com/JetBrains/intellij-sdk-code-samples
 - 项目：
   - Template：https://github.com/JetBrains/intellij-platform-plugin-template#getting-started
   - 开发平台（IntelliJ Platform）：https://github.com/JetBrains/intellij-community

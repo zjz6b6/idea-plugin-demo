@@ -26,12 +26,34 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <!-- 行为 https://plugins.jetbrains.com/docs/intellij/plugin-actions.html-->
-    <actions>
+    <actions resource-bundle="messages.BasicActionsBundle">
         <action id="com.github.zjz6b6.ideaplugindemo.demo.action.PopupDialogAction"
                 class="com.github.zjz6b6.ideaplugindemo.demo.action.PopupDialogAction" text="PopupDialogAction"
                 description="this is a test of AnAction added to toolWindow">
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
+
+        <group id="org.intellij.sdk.action.GroupedActions"
+                text="Static Grouped Actions"
+                popup="true">
+            <add-to-group group-id="ToolsMenu"
+                    anchor="after"
+                    relative-to-action="com.github.zjz6b6.ideaplugindemo.demo.action.PopupDialogAction"/>
+            <action class="com.github.zjz6b6.ideaplugindemo.demo.action.PopupDialogAction"
+                    id="org.intellij.sdk.action.GroupPopDialogAction"
+                    text="A Group Action"
+                    description="SDK static grouped action example">
+            </action>
+        </group>
+
+        <group id="com.github.zjz6b6.ideaplugindemo.demo.action.group.CustomDefaultActionGroup"
+               class="com.github.zjz6b6.ideaplugindemo.demo.action.group.CustomDefaultActionGroup"
+               text="CustomDefaultActionGroup" description="this is a CustomDefaultActionGroup"
+               popup="true" >
+            <add-to-group group-id="EditorPopupMenu" anchor="first" />
+            <action id="org.intellij.sdk.action.CustomGroupedAction"
+                    class="com.github.zjz6b6.ideaplugindemo.demo.action.PopupDialogAction" icon="com.github.zjz6b6.ideaplugindemo.demo.SdkIcons.Sdk_default_icon"/>
+        </group>
     </actions>
 
     <!-- 声明该插件对IDEA core或其他插件的扩展，Ns是NameSpace的缩写
