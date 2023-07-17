@@ -1,4 +1,4 @@
-package com.github.zjz6b6.ideaplugindemo.swing;
+package com.github.zjz6b6.ideaplugindemo.demo.swing;
 
 
 import javax.swing.*;

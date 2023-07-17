@@ -12,7 +12,11 @@ import com.github.zjz6b6.ideaplugindemo.MyBundle
 import com.github.zjz6b6.ideaplugindemo.services.MyProjectService
 import javax.swing.JButton
 
-
+/**
+ * ToolWindowFactory：工具窗口的扩展类
+ * DumbAware：如果工具窗口的内容需要索引，则要实现此接口；
+ * ToolWindowManagerListener：允许监听工具窗口（取消）注册/显示事件
+ */
 class MyToolWindowFactory : ToolWindowFactory {
 
     init {

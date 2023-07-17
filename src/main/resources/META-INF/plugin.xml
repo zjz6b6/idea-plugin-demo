@@ -27,12 +27,24 @@
 
     <!-- 行为 https://plugins.jetbrains.com/docs/intellij/plugin-actions.html-->
     <actions>
+        <action id="com.github.zjz6b6.ideaplugindemo.demo.action.PopupDialogAction"
+                class="com.github.zjz6b6.ideaplugindemo.demo.action.PopupDialogAction" text="PopupDialogAction"
+                description="this is a test of AnAction added to toolWindow">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
     </actions>
 
-    <!-- 声明该插件对IDEA core或其他插件的扩展，Ns是NameSpace的缩写 -->
+    <!-- 声明该插件对IDEA core或其他插件的扩展，Ns是NameSpace的缩写
+        id：对应于工具窗口按钮上显示的文本，可用绑定资源包；
+        icon：工具窗口按钮上显示的图标，可以使用平台内置的图标，工具类为com.intellij.icons.AllIcons.java，具体的.svg文件存放在app.jar包下的icons文件夹中；
+        secondary：工具窗口显示在主组还是次组；
+        anchor：工具窗口的位置，“左”（默认）、也可以设置“右”或“底”;
+        factoryClass：自定义的实现类
+    -->
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.zjz6b6.ideaplugindemo.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <errorHandler implementation="com.zd.errreport.SentryErrorReporter"/>
+        <toolWindow factoryClass="com.github.zjz6b6.ideaplugindemo.toolWindow.MyToolWindowFactory"
+                    id="MyToolWindow" anchor="right" />
+        <errorHandler implementation="com.github.zjz6b6.ideaplugindemo.error.MyErrorHandler"/>
     </extensions>
 
     <!-- 插件定义的扩展点，以供其他插件扩展该插件，类似Java的抽象类的功能

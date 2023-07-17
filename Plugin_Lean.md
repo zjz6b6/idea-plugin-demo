@@ -31,3 +31,13 @@
 <img src="./assets/b864dfbc3c734bd9bf8c9b0a0b797b8a.png" alt="img" style="zoom:50%;" />
 
 <img src="./assets/Swing-Java.png" alt="img"  />
+
+**EditorTextField**：**JTextArea**替换成IntelliJ平台的编辑器组件增加了：语法高亮支持、代码完成、代码折叠等功能；
+**JBTList**：替换**JList**
+**JBTree**：替换**JTree**：
+**文件选择器：可按需要使用**FileChooser**、**TreeClassChooserFactory**和**PackageChooserDialog**，后面两个是针对类和包的；**
+**Messages**：可通过**showCheckboxMessageDialog()**方法创建简单的消息框；
+**JBSplitter**：替换**JSplitPane**
+**JBTabs**：替换**TabbedPane**
+**Toolbars**：替换**JToolBar**
+**对于其它的控件也建议换成**IDEA**的，方法就是把原来**Swing**控件的类名由**J**开头换成**JB开头即可。

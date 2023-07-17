@@ -1,18 +1,26 @@
-package com.github.zjz6b6.ideaplugindemo.swing
+package com.github.zjz6b6.ideaplugindemo.demo.swing
 
-import com.openhtmltopdf.layout.BoxBuilder
 import java.awt.*
-import java.awt.event.ActionEvent
 import java.awt.event.ActionListener
 import javax.swing.*
 import javax.swing.event.ChangeListener
-import kotlin.concurrent.thread
 
 
 /**
  * 边界布局
  *
  * 其中边上的4个方向可以不设置，这样就可以实现列和行布局模式了 ？？
+ *
+ * EditorTextField：JTextArea替换成IntelliJ 平台的编辑器组件增加了：语法高亮支持、代码完成、代码折叠等功能；
+ * JBTList：替换JList
+ * JBTree：替换JTree：
+ * 文件选择器：可按需要使用FileChooser、TreeClassChooserFactory和PackageChooserDialog，后面两个是针对类和包的；
+ * Messages：可通过showCheckboxMessageDialog()方法创建简单的消息框；
+ * JBSplitter：替换JSplitPane
+ * JBTabs：替换TabbedPane
+ * Toolbars：替换JToolBar
+ * 对于其它的控件也建议换成IDEA的，方法就是把原来Swing控件的类名由J开头换成JB开头即可。
+ *
  * @doc https://blog.csdn.net/liudonglovehemin/article/details/130740949
  */
 fun borderLayoutTest() {
