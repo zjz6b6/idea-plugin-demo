@@ -15,6 +15,15 @@
 
 
 
+扩展：JCEF：https://bitbucket.org/chromiumembedded/java-cef/src/master/
+
+Icon：
+
+- https://bjansen.github.io/intellij-icon-generator/
+- https://jetbrains.design/intellij/resources/icons_list/
+
+
+
 ### 线程管理
 
 - ProgressManager

@@ -14,7 +14,8 @@ class CustomDefaultActionGroup : DefaultActionGroup() {
     override fun update(e: AnActionEvent) {
         var editor = e.getData(CommonDataKeys.EDITOR)
         e.presentation.isEnabled = (editor != null)
-        e.presentation.icon = SdkIcons.Sdk_default_icon
+//        e.presentation.icon = SdkIcons.Sdk_default_icon
+        e.presentation.icon = SdkIcons.My_icon
     }
 
 }
