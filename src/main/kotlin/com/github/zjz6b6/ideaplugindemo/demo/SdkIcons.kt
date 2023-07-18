@@ -1,5 +1,6 @@
 package com.github.zjz6b6.ideaplugindemo.demo
 
+import com.github.zjz6b6.ideaplugindemo.ja.IconHelper
 import com.intellij.openapi.util.IconLoader
 import javax.swing.Icon
 
@@ -16,4 +17,8 @@ object SdkIcons {
     @JvmField
     val My_icon: Icon = IconLoader.getIcon("/icons/myIcon.svg", SdkIcons::class.java)
 
+}
+
+fun main(args: Array<String>) {
+    var java = IconHelper::class.java
 }
